@@ -1,3 +1,3 @@
-*{
-    font-family: "Poppins";
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
