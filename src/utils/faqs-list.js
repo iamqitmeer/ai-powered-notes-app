@@ -1,10 +1,4 @@
-export interface FaqItem {
-  id: string
-  question: string
-  answer: string
-}
-
-export const faqsList: FaqItem[] = [
+export const faqsList = [
   {
     id: '1',
     question: 'What payment methods do you accept?',

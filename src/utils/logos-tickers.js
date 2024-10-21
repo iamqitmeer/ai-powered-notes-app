@@ -5,9 +5,7 @@ import echoLogo from '../assets/images/echo.svg'
 import pulseLogo from '../assets/images/pulse.svg'
 import quantumLogo from '../assets/images/quantum.svg'
 
-type LogoTicker = { id: string; src: string | undefined; alt: string }
-
-export const logosTickers: LogoTicker[] = [
+export const logosTickers = [
   {
     id: '1',
     src: acmeLogo,

@@ -1,10 +1,4 @@
-export interface Feature {
-  id: string
-  title: string
-  description: string
-}
-
-export const featuresList: Feature[] = [
+export const featuresList = [
   {
     id: '1',
     title: 'Connect Your Tools',

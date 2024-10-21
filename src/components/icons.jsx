@@ -1,20 +1,17 @@
-import type { IconProps as PhosphorProps } from '@phosphor-icons/react'
-import * as Phosphor from '@phosphor-icons/react'
+import * as Phosphor from '@phosphor-icons/react';
 
-export type Icon = (props: PhosphorProps) => JSX.Element
+export const ArrowRight = Phosphor.ArrowRight;
+export const Ecosystem = Phosphor.Leaf;
+export const Plus = Phosphor.Plus;
+export const Minus = Phosphor.Minus;
+export const YoutubeLogo = Phosphor.YoutubeLogo;
+export const XLogo = Phosphor.XLogo;
+export const InstagramLogo = Phosphor.InstagramLogo;
+export const TiktokLogo = Phosphor.TiktokLogo;
+export const LinkedinLogo = Phosphor.LinkedinLogo;
+export const PinterestLogo = Phosphor.PinterestLogo;
 
-export const ArrowRight = Phosphor.ArrowRight
-export const Ecosystem = Phosphor.Leaf
-export const Plus = Phosphor.Plus
-export const Minus = Phosphor.Minus
-export const YoutubeLogo = Phosphor.YoutubeLogo
-export const XLogo = Phosphor.XLogo
-export const InstagramLogo = Phosphor.InstagramLogo
-export const TiktokLogo = Phosphor.TiktokLogo
-export const LinkedinLogo = Phosphor.LinkedinLogo
-export const PinterestLogo = Phosphor.PinterestLogo
-
-export const Menu: Icon = (props) => (
+export const Menu = (props) => (
   <svg
     width="20"
     height="21"
@@ -40,4 +37,4 @@ export const Menu: Icon = (props) => (
       </clipPath>
     </defs>
   </svg>
-)
+);

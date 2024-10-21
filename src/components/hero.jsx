@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { AnimationControls, motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
 import cursoImage from "./../assets/images/cursor.svg";
@@ -19,7 +19,7 @@ export function Hero() {
     },
   };
 
-  const startFloating = (controls: AnimationControls) => {
+  const startFloating = (controls) => {
     controls.start(floatAnimation);
   };
 
@@ -28,7 +28,7 @@ export function Hero() {
     startFloating(messageImageAnimateControls);
   }, [cursoImageAnimateControls, messageImageAnimateControls]);
 
-  async function handleDragEnd(controls: AnimationControls) {
+  async function handleDragEnd(controls) {
     await controls.start({
       x: 0,
       y: 0,

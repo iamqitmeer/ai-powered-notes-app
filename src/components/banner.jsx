@@ -6,11 +6,14 @@ export function Banner() {
       <div className="container flex items-center justify-center">
         <p className="flex gap-2 font-medium">
           <span className="hidden sm:inline">
-            This project was created by     <a
-            href="https://linkedin.com/in/iamqitmeer"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Qitmeer Raza.</a>
+            This project was created by{' '}
+            <a
+              href="https://linkedin.com/in/iamqitmeer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Qitmeer Raza.
+            </a>
           </span>
           <a
             href="https://github.com/iamqitmeer"

@@ -1,25 +1,19 @@
 import { motion, useMotionTemplate, useMotionValue } from 'framer-motion'
 import { useEffect, useRef } from 'react'
 
-import { Feature } from '../utils/features-list'
+import { featuresList } from '../utils/features-list'
 import * as Icons from './icons'
 
-interface FeatureCardProps {
-  feature: Feature
-}
-
-export function FeatureCard({
-  feature: { description, id, title },
-}: FeatureCardProps) {
+export function FeatureCard({ feature: { description, id, title } }) {
   const offsetX = useMotionValue(-100)
   const offsetY = useMotionValue(-100)
 
   const maskImage = useMotionTemplate`radial-gradient(100px 100px at ${offsetX}px ${offsetY}px, black, transparent)`
 
-  const border = useRef<HTMLDivElement | null>(null)
+  const border = useRef(null)
 
   useEffect(() => {
-    const updateMousePosition = (e: MouseEvent) => {
+    const updateMousePosition = (e) => {
       if (!border.current) {
         return
       }

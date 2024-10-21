@@ -5,7 +5,7 @@ import emojiStarImage from '../assets/images/emojistar.svg'
 import helixImage from '../assets/images/helix2.svg'
 
 export function CallToAction() {
-  const containerRef = useRef<HTMLDivElement | null>(null)
+  const containerRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start end', 'end end'],

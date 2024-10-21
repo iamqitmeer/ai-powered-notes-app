@@ -1,19 +1,11 @@
 import { AnimatePresence, motion } from 'framer-motion'
-
-import { FaqItem } from '../utils/faqs-list'
 import * as Icons from './icons'
-
-interface AccordionItemProps {
-  fqaItem: FaqItem
-  isOpen: boolean
-  onClick: () => void
-}
 
 export function AccordionFAQItem({
   fqaItem: { answer, id, question },
   onClick,
   isOpen,
-}: AccordionItemProps) {
+}) {
   return (
     <div
       key={id}
