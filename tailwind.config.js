@@ -1,16 +1,18 @@
-// tailwind.config.js
-const { nextui } = require("@nextui-org/react");
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        padding: '1rem',
+        center: true,
+      },
+      fontFamily: {
+        dmSans: ['"DM Sans", sans-serif', defaultTheme.fontFamily.sans],
+      },
+    },
   },
-  darkMode: "class",
-  plugins: [nextui()],
-};
+  plugins: [],
+}
