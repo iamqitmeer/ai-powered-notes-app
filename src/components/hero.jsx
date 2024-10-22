@@ -77,7 +77,7 @@ export function Hero() {
               />
             </motion.div>
             <motion.div
-              className="absolute left-[665px] top-[120px] hidden sm:inline"
+              className="absolute left-[695px] top-[120px] hidden sm:inline"
               drag
               dragSnapToOrigin
               initial={{ y: 0 }}
@@ -103,7 +103,7 @@ export function Hero() {
           </p>
         </div>
         <div className="mt-4 flex justify-center">
-          <button className="rounded-lg bg-white px-5 py-3 font-medium text-black">
+          <button className="rounded-lg bg-white px-5 py-3 mb-12 font-medium text-black">
             Get for free
           </button>
         </div>

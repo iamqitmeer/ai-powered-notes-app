@@ -5,14 +5,14 @@ import { Features } from './components/features'
 import { Footer } from './components/footer'
 import { Hero } from './components/hero'
 import { LogoTicker } from './components/logo-ticker'
-import { Navbar } from './components/navbar'
+import Header from "./components/Header"
 import { ProductShowcase } from './components/product-showcase'
 
 export function App() {
   return (
     <div className="min-h-screen antialiased">
       <Banner />
-      <Navbar />
+      <Header />
       <Hero />
       <LogoTicker />
       <Features />
