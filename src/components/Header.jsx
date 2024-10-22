@@ -13,7 +13,7 @@ const Header = () => {
       onMenuOpenChange={setIsMenuOpen}
       className="bg-black text-white"
     >
-      {/* Left: Logo */}
+      {/* Left: Mobile Menu Toggle for small screens */}
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -21,6 +21,7 @@ const Header = () => {
         />
       </NavbarContent>
 
+      {/* Left: Logo for larger screens */}
       <NavbarContent justify="start" className="hidden sm:flex">
         <NavbarBrand className="mr-10">
           <p className="font-bold text-white text-lg">ACME</p>
@@ -29,7 +30,7 @@ const Header = () => {
           <NavbarItem key={index}>
             <Link
               href={`#${item.toLowerCase()}`}
-              className="text-white hover:text-gray-200 font-medium"
+              className="text-white hover:text-gray-200 font-medium transition duration-300"
             >
               {item}
             </Link>
@@ -37,40 +38,28 @@ const Header = () => {
         ))}
       </NavbarContent>
 
-      {/* Center: Nav Links */}
-      {/* <NavbarContent className="hidden sm:flex gap-6" justify="start">
-      </NavbarContent> */}
-
       {/* Right: Login and Sign-Up Button */}
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="flex items-center">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#" className="text-white hover:text-gray-300">
+          <Link href="#" className="text-white hover:text-gray-300 transition duration-300">
             Login
           </Link>
         </NavbarItem>
-        <div className="w-[2px] h-8 bg-gray-800"></div>
+        <div className="w-[2px] h-8 bg-gray-800 mx-3 hidden lg:block"></div>
         <NavbarItem>
-          <Button as={Link} className="bg-purple-400 text-white" variant="flat">
+          <Button as={Link} className="bg-purple-500 text-white hover:bg-purple-600 transition duration-300" variant="flat">
             Get Started
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       {/* Responsive Mobile Menu */}
-      <NavbarMenu>
+      <NavbarMenu className="sm:hidden bg-gray-70">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link
-              className="w-full text-white"
-              color={
-                index === 2
-                  ? "warning"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              className="w-full text-white py-1 block text-lg transition duration-300"
               href={`#${item.toLowerCase()}`}
-              size="lg"
             >
               {item}
             </Link>
