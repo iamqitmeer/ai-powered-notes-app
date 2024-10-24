@@ -8,11 +8,8 @@ function UserAuthLandingPage() {
         <h1>Build something beautiful.</h1>
       </div>
       <div>
-
-<Button></Button>
-
+        <Button></Button>
       </div>
-      
     </div>
   );
 }
