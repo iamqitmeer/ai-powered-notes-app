@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
 
-export function App() {
+function App() {
   return <Button variant="secondary">Secondary</Button>
 }
+
+export default App
